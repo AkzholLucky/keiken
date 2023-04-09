@@ -73,7 +73,11 @@
             <!--==================== HOME ====================-->
             <section class="home" id="home">
                 
-                <video autoplay loop muted src="assets/video/ШОУРИЛ ДЛЯ САЙТА (1).mp4" class="home__img"></video>
+                <video autoplay loop muted src="assets/video/ШОУРИЛ ДЛЯ САЙТА (1).mp4" class="home__img" type="video/mp4">
+                    <fallback>
+                        <img src="assets/img/8.jpg" alt="Что то не так с соединением или сервером!">
+                      </fallback>
+                </video>
                 <!-- <img src="assets/img/home1.jpg" alt="" class="home__img"> -->
                 <div class="home__container container grid">
                     
