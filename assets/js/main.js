@@ -257,3 +257,12 @@ window.addEventListener('load', () => {
   });
 
   const spinner = new Spinner().spin(document.getElementById('spinner'));
+
+  var video = document.getElementById('bg-video');
+  var videoTop = video.getBoundingClientRect().top;
+
+  window.addEventListener('scroll', function() {
+    if (videoTop < window.innerHeight) {
+      video.play();
+    }
+  });
