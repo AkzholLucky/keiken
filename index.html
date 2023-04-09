@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/img/favicon.PNG" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>KEIKEN production</title>
+            <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+            <script src="assets/js/i18n.js"></script>
+    </head>
+
+    <body>
+        <div id="spinner"></div>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo"><img src="assets/img/AVAVAVA.png" alt="KEIKEN" height="150px" width="150px"></a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link" data-i18n="home">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link" data-i18n="projects">Проекты</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link" data-i18n="about">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#price" class="nav__link" data-i18n="price">Цена</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#review" data-i18n="review1" class="nav__link">Отзывы</a>
+                        </li>
+                        <li class="nav__item" class="select-wrapper">
+                            <select id="languageSelect" class="language-select">
+                                <option value="?lang">RU</option>
+                                <option value="?lang=tw">KZ</option>
+                                <option value="?lang=jp">EN</option>
+                            </select>
+                            <span class="select-arrow"></span>
+                        </li>
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                
+                <video autoplay loop muted src="assets/video/ШОУРИЛ ДЛЯ САЙТА (1).mp4" class="home__img"></video>
+                <!-- <img src="assets/img/home1.jpg" alt="" class="home__img"> -->
+                <div class="home__container container grid">
+                    
+                    <div class="home__data">
+                        <span class="home__data-subtitle" data-i18n="title1">Доступно, Качественно и c любовью!</span>
+                        <h1 class="home__data-title" data-i18n="title2">Покажите ваш Бизнес <br> <b>в наилучшем свете</b> <br>с помощью <b> <br> нашего видеопродакшна!</b></h1>
+                        <!-- <a href="#about" class="button">Наши проекты</a> -->
+
+                        <!-- <button onclick="playVideo()" class="button">Воспроизвести видео</button>
+
+                        <div id="player"></div> -->
+                                    <!-- Button to trigger the modal -->
+                        <button data-i18n="home_video" id="modal-btn" class="button" onclick="setVideo('video-modal', 'modal-btn', 'iframe', 'https://fast.wistia.net/embed/iframe/fbeauupp63')">Воспроизвести видео</button>
+
+                    </div>
+
+                    <!-- The modal -->
+                    <div id="video-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <iframe id="iframe" allow='autoplay'></iframe>
+                        </div>
+                    </div>
+
+                    <div class="home__social">
+                        <a href="tel:+77470427998" class="home__social-link">
+                            <i class="ri-phone-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/keiken.prod/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://wa.me/+77470427998?text=Здравствуйте!%20Я%20интересуюсь%20по%20поводу%20вашей%20услуги." target="_blank" class="home__social-link">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PROJECT ====================-->
+            <section class="about section" id="projects">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title" data-i18n="about_title">Наши проекты</h2>
+                    </div>
+
+                    <ul class="grid-container">
+                        <li class="grid-item" id="about-li1">
+                            <button id="modal-btn2" class="button button-project" onclick="setVideo('video-modal2', 'modal-btn2', 'iframe2', 'https://fast.wistia.net/embed/iframe/g0d4wf8dw8')"></button>
+                        </li>
+
+                        <li class="grid-item">
+                            <button id="modal-btn3" class="button button-project" onclick="setVideo('video-modal2', 'modal-btn3', 'iframe2', 'https://fast.wistia.net/embed/iframe/vtcrfz70us')"></button>
+                            <div class="play" data-text="Смотреть"></div>            
+                        </li>
+
+                        <li class="grid-item">
+                            
+                            <button id="modal-btn4" class="button button-project" onclick="setVideo('video-modal2', 'modal-btn4', 'iframe2', 'https://fast.wistia.net/embed/iframe/90x3b54yej')"></button>
+                        </li>
+
+                        <li class="grid-item">
+                            
+                            <button id="modal-btn5" class="button button-project" onclick="setVideo('video-modal2', 'modal-btn5', 'iframe2', 'https://fast.wistia.net/embed/iframe/w11916l5x4')"></button>
+                        </li>
+
+                        <li class="grid-item">
+                            
+                            <button id="modal-btn6" class="button button-project" onclick="setVideo('video-modal2', 'modal-btn6', 'iframe2', 'https://fast.wistia.net/embed/iframe/yr05s9imbc')"></button>
+                        </li>
+
+                        <li class="grid-item">
+                            
+                            <button id="modal-btn7" class="button button-project" onclick="setVideo('video-modal2', 'modal-btn7', 'iframe2', 'https://fast.wistia.net/embed/iframe/c8drua9an4')"></button>
+                        </li>
+
+                        <li class="grid-item">
+                            
+                            <button id="modal-btn8" class="button button-project" onclick="setVideo('video-modal2', 'modal-btn8', 'iframe2', 'https://fast.wistia.net/embed/iframe/9d9z33yu07')"></button>
+                        </li>
+
+                        <li class="grid-item">
+                        
+                            <button id="modal-btn9" class="button button-project" onclick="setVideo('video-modal2', 'modal-btn9', 'iframe2', 'https://fast.wistia.net/embed/iframe/jmzc09fxtm')"></button>
+                        </li>
+
+                        <li class="grid-item">
+                        
+                            <a id="modal-btn10" href="https://www.youtube.com/channel/UCnpQJwitlPR1Oqd46sjr8LQ" class="button button-project" target="_blank"></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- The modal -->
+                <div id="video-modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <iframe id="iframe2" allow='autoplay'></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="experience section" id="about">
+                <h2 class="section__title" data-i18n="section_title">Что говорят о нас цифры</h2>
+
+                <div class="experience__container container grid">
+                    <div class="experience__content grid">
+                        <div class="experience__data">
+                            <h2 class="experience__number">5+</h2>
+                            <span class="experience__description" data-i18n="desciption1">Лет <br> Опыта</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">150+</h2>
+                            <span class="experience__description" data-i18n="desciption2">Выполненных <br> Работ</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">1000+</h2>
+                            <span class="experience__description" data-i18n="desciption3">Часа <br> Cъемок</span>
+                        </div>
+                    </div>
+
+                    <div class="ex-img-inherit">
+                        <div class="ex-img">
+                            <img src="assets/img/red-logo.png" alt="Degirmen logo" >
+                        </div>
+                        <div class="ex-img">
+                            <img src="assets/img/фывывыфвфывыф.png" alt="Clip logo">
+                        </div>
+                        <div class="ex-img">
+                            <img src="assets/img/HyperX-logo.png" alt="HyperX-logo">
+                        </div>
+                        <div class="ex-img">
+                            <img src="assets/img/SFDSDFSD.png" alt="Pazl logo">
+                        </div>                                                          
+                    </div>
+                </div>
+            </section>
+
+
+            <!--==================== PRICE ====================-->
+            <section class="subscribe section" id="price">
+                <div class="subscribe__bg">
+                    <div class="subscribe__container container">
+                        <h2 class="section__title subscribe__title" data-i18n="price_title">Узнай цену прямо сейчас!</h2>
+                        <p class="subscribe__description" data-i18n="price_description">Оставь заявку и получи 10% скидку!</p>
+    
+                        <form action="" class="subscribe__form" id="subcribe" style="text-align: center; padding: 40px 0;">
+                            <div class="" style="margin-bottom: 15px;">
+                                <input data-i18n="[placeholder]placehoder1" type="text" required name="name" placeholder="Введите имя" class="subscribe__input" style="border: 1px solid;border-radius: 10px;width: 100%;height: 40px;">
+                
+                            </div>
+                            <div class="" style="margin-bottom: 15px;">
+                                <input data-i18n="[placeholder]placehoder2" type="tel" id="phone" required name="number" maxlength="18" placeholder="Введите номер" class="subscribe__input" style="border: 1px solid;border-radius: 10px;width: 100%;height: 40px;">
+                                
+                            </div>
+
+                            <div>
+                                <button data-i18n="submit" class="button" type="submit" style="padding: 0.9rem 2rem; border-radius: 10px;">
+                                    Отправить
+                                </button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <div id="snackbar" data-i18n="submitted">Отправлено!</div>
+
+            <!--==================== PLACES ====================-->
+            <section class="place section" id="review">
+                <h2 class="section__title" data-i18n="review">Пусть о нас говорят <br> <b>Наши клиенты</b></h2>
+
+                <div class="place__container container grid">
+                    <!--==================== PLACES CARD 1 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/IMG_4437.JPG" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--==================== PLACES CARD 2 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/IMG_4390.PNG" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--==================== PLACES CARD 3 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/IMG_4438.JPG" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--==================== PLACES CARD 4 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/IMG_4439.JPG" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--==================== PLACES CARD 5 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/IMG_4441.JPG" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--==================== PLACES CARD 6 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/IMG_4443.JPG" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ==================== SPONSORS ====================
+            <section class="sponsor section">
+                <div class="sponsor__container container grid">
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors1.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors2.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors3.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors4.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors5.png" alt="" class="sponsor__img">
+                    </div>
+                </div>
+            </section> -->
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">    
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2023 KEIKEN. All rigths reserved.</p>
+                    <div class="footer__terms">
+                        <a href="mailto:keiken.prod@gmail.com" target="_blank" class="footer__social">
+                            <i class="ri-at-line"></i>
+                        </a>
+                        <a href="https://wa.me/+77470427998?text=Здравствуйте!%20Я%20интересуюсь%20по%20поводу%20вашей%20услуги." target="_blank" class="footer__social">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/keiken.prod/" target="_blank" class="footer__social">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCnpQJwitlPR1Oqd46sjr8LQ" target="_blank" class="footer__social">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" defer></script>
+        <script src="spin.min.js"></script>
+    </body>
+</html>
