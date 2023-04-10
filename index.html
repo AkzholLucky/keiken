@@ -21,6 +21,36 @@
     </head>
 
     <body>
+        <script>
+            function sendPostRequest() {
+                console.log("Hello Akzhol!");
+                // ваш код отправки запроса здесь
+
+                fetch('https://keiken.onrender.com/keiken/calculator', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                    body: JSON.stringify({ "New Client": "In site!" })
+                })
+                .then(response => {
+                if (response.ok) {
+                    return response.json(); // если сервер ответил корректным JSON-объектом
+                } else {
+                    throw new Error('Ошибка HTTP: ' + response.status); // генерируем ошибку в случае некорректного ответа
+                }
+                })
+                .then(data => {
+                    console.log(data); // обрабатываем полученные данные
+                })
+                .catch(error => {
+                    console.error(error); // обрабатываем ошибки, если возникли
+                });
+            }
+
+
+            sendPostRequest();
+        </script>
         <div id="spinner"></div>
         <header class="header" id="header">
             <nav class="nav container">
@@ -386,6 +416,5 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" defer></script>
-        <script src="spin.min.js"></script>
     </body>
 </html>
