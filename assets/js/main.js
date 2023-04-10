@@ -266,3 +266,31 @@ window.addEventListener('load', () => {
       video.play();
     }
   });
+
+  function sendPostRequest() {
+    // ваш код отправки запроса здесь
+
+    fetch('https://keiken.onrender.com/keiken/calculator', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ "Test": "Every hour" })
+})
+.then(response => {
+  if (response.ok) {
+    return response.json(); // если сервер ответил корректным JSON-объектом
+  } else {
+    throw new Error('Ошибка HTTP: ' + response.status); // генерируем ошибку в случае некорректного ответа
+  }
+})
+.then(data => {
+  console.log(data); // обрабатываем полученные данные
+})
+.catch(error => {
+  console.error(error); // обрабатываем ошибки, если возникли
+});
+  }
+  
+  // Запускаем функцию отправки запроса каждый час
+  setInterval(sendPostRequest, 1000 * 60 * 60); // 1000 мс * 60 с * 60 минут
